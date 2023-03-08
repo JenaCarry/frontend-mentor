@@ -7,12 +7,10 @@
 }
 
 body {
-    /* display: grid;
-    place-content: center; */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     font: 18px 'Hanken Grotesk', sans-serif;
     font-weight: 400;
@@ -171,6 +169,7 @@ img {
 
 @media screen and (max-width: 550px) {
     body {
+        width: 100%;
         padding: 0;
         align-items: flex-start;
         font-size: 16px;
