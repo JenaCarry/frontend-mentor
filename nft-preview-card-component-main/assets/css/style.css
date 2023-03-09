@@ -59,7 +59,6 @@ p {
 
 .background {
     position: relative;
-    border-radius: 10px;
     cursor: pointer;
     background: center no-repeat url("../images/image-equilibrium.jpg");
     background-size: cover;
