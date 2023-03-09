@@ -142,6 +142,10 @@ body {
         padding: 20px 30px;
     }
 
+    .highlight-title {
+        line-height: 35px;
+    }
+
     .highlight-title,
     .new-price {
         font-size: 32px;
