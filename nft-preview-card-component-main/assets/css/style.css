@@ -47,7 +47,7 @@ p {
 
 .container h1 {
     color: #fff;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
     margin: 20px 0;
     cursor: pointer;
@@ -61,22 +61,14 @@ p {
     position: relative;
     border-radius: 10px;
     cursor: pointer;
-}
-
-.background:hover {
-    background-color: var(--cyan);
-}
-
-.background .equilibrium-image {
-    display: block;
-    width: 100%;
-    height: auto;
+    background: center no-repeat url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    height: 280px;
     border-radius: 10px;
 }
 
-.background .equilibrium-image:hover {
-    background-color: var(--cyan);
-    opacity: 50%;
+.background:hover {
+    background-image: linear-gradient(rgba(0, 255, 247, 0.5), rgba(0, 255, 247, 0.5)), url("../images/image-equilibrium.jpg");
 }
 
 .background .icon-view {
