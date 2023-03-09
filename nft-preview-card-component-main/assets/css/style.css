@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --default-font: 'Outfit', sans-serif;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--default-font);
+    font-size: 15px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+    color: var(--soft-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 10px;
+    line-height: 1.4;
+}
+
+p {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 375px;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.2 ease-out;
+}
+
+.container h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.container h1:hover {
+    color: var(--cyan);
+}
+
+.background {
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.background:hover {
+    background-color: var(--cyan);
+}
+
+.background .equilibrium-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.background .equilibrium-image:hover {
+    background-color: var(--cyan);
+    opacity: 50%;
+}
+
+.background .icon-view {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.background:hover .icon-view {
+    display: block;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+}
+
+.values span {
+    display: flex;
+    align-items: center;
+}
+
+.values .left {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.space {
+    margin-right: 10px;
+}
+
+.values .right {
+    font-weight: 300;
+}
+
+.line {
+    border-bottom: 1px solid var(--line);
+    margin: 20px 0;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+}
+
+.creator {
+    width: 50px;
+    height: auto;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author {
+    color: #fff;
+    text-decoration: none;
+}
+
+.author:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+}
