@@ -35,9 +35,12 @@ body {
 
 .container {
     width: 100%;
+    max-width: 375px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    transition: 0.3s ease-out;
 }
 
 #product-image .img-flex {
@@ -113,7 +116,7 @@ body {
 }
 
 /* Small */
-@media screen and (min-width: 554px) {
+@media screen and (min-width: 576px) {
     body {
         display: flex;
         align-items: center;
@@ -123,7 +126,7 @@ body {
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: 620px;
+        max-width: 600px;
     }
 
     #product-image .img-flex {
