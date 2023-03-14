@@ -12,9 +12,11 @@
 
 <body>
   <div class="container">
-    <div class="card-image">
-      <div class="image"></div>
-    </div>
+    <picture>
+      <source class="image" media="(min-width: 768px)" srcset="assets/images/image-header-desktop.jpg"
+        type="image/jpeg">
+      <img class="image" src="assets/images/image-header-mobile.jpg" alt="Image Header Mobile">
+    </picture>
     <div class="card-info">
       <h1 class="title">Get <span class="title-color">insights</span> that help your business grow.</h1>
       <p class="description">
