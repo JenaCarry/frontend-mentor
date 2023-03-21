@@ -101,38 +101,3 @@ img {
     letter-spacing: 1px;
     margin-top: 3px;
 }
-
-/* @media screen and (min-width: 375px) {
-    body {
-        background: no-repeat left -200px top -180px url("../images/bg-pattern-top.svg"), no-repeat right -200px bottom -180px url("../images/bg-pattern-bottom.svg"), linear-gradient(var(--dark-cyan), var(--dark-cyan));
-        background-size: contain;
-    }
-}
-
-@media screen and (min-width: 481px) {
-    body {
-        background: no-repeat left -280px top -200px url("../images/bg-pattern-top.svg"), no-repeat right -280px bottom -200px url("../images/bg-pattern-bottom.svg"), linear-gradient(var(--dark-cyan), var(--dark-cyan));
-        background-size: contain;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    body {
-        background: no-repeat left -300px top -200px url("../images/bg-pattern-top.svg"), no-repeat right -300px bottom -200px url("../images/bg-pattern-bottom.svg"), linear-gradient(var(--dark-cyan), var(--dark-cyan));
-        background-size: contain;
-    }
-}
-
-@media screen and (min-width: 680px) {
-    body {
-        background: no-repeat left -270px top -200px url("../images/bg-pattern-top.svg"), no-repeat right -270px bottom -250px url("../images/bg-pattern-bottom.svg"), linear-gradient(var(--dark-cyan), var(--dark-cyan));
-        background-size: contain;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    body {
-        background: no-repeat left -70px top -280px url("../images/bg-pattern-top.svg"), no-repeat right -40px bottom -380px url("../images/bg-pattern-bottom.svg"), linear-gradient(var(--dark-cyan), var(--dark-cyan));
-        background-size: contain;
-    }
-} */
