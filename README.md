@@ -17,3 +17,5 @@ Frontend Mentor Challenges
 * <a href="https://jenacarry.github.io/frontend-mentor/stats-preview-card-component-main/" target="_blank">**stats-preview-card-component-main**</a>
 
 * <a href="https://jenacarry.github.io/frontend-mentor/three-column-preview-card-component-main/" target="_blank">**three-column-preview-card-component-main**</a>
+* 
+* <a href="https://jenacarry.github.io/frontend-mentor/profile-card-component-main/" target="_blank">**profile-card-component-main**</a>
