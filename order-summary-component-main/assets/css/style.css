@@ -18,11 +18,10 @@
 
 body {
     font: 500 16px var(--default-font);
-    width: 100vw;
     min-height: 100vh;
-    background: no-repeat top url("../images/pattern-background-mobile.svg"), linear-gradient(var(--pale-blue), var(--pale-blue));
-    background-size: 100%;
-    padding: 20px;
+    background: var(--pale-blue) no-repeat top url("../images/pattern-background-mobile.svg");
+    background-size: contain;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +31,6 @@ body {
 .container {
     width: 100%;
     max-width: 375px;
-    height: 530px;
     background-color: #fff;
     color: var(--desaturated-blue);
     border-radius: 20px;
@@ -40,16 +38,13 @@ body {
     box-shadow: 0px 15px 20px rgba(56, 41, 224, 0.15);
 }
 
-.illustration-hero {
+.header-image {
+    display: block;
     width: 100%;
-    height: 160px;
-    background: no-repeat url("../images/illustration-hero.svg");
-    background-size: 100% 100%;
+    height: auto;
 }
 
 #information {
-    width: 100%;
-    height: calc(530px - 150px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,22 +56,25 @@ body {
     font-size: 22px;
     font-weight: 900;
     color: var(--dark-blue);
+    margin: 10px auto;
 }
 
 #information p {
     text-align: center;
+    margin: 10px auto;
 }
 
-.product {
+.plan-box {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
     background-color: var(--very-pale-blue);
     border-radius: 10px;
     position: relative;
-    padding: 15px;
+    padding: 15px 10px;
     font-size: 15px;
+    margin: 10px auto;
 }
 
 .plans {
@@ -84,7 +82,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    left: 80px;
+    left: 70px;
 }
 
 .annual-plan {
@@ -115,6 +113,7 @@ body {
     padding: 12px;
     cursor: pointer;
     box-shadow: 0px 10px 20px rgba(56, 41, 224, 0.3);
+    margin: 10px auto;
 }
 
 .btn:hover {
@@ -125,56 +124,28 @@ body {
     font-size: 15px;
     font-weight: 900;
     cursor: pointer;
+    margin: 10px auto;
 }
 
 .cancel:hover {
     color: var(--dark-blue);
 }
 
-@media screen and (max-width: 374px) {
-    body {
-        padding: 10px;
+@media screen and (min-width: 425px) {
+    .plan-box {
+        padding: 15px;
+        font-size: 15px;
+        margin: 10px auto;
     }
 
-    #information {
-        padding: 20px;
-    }
-
-    .product {
-        padding: 15px 6px;
-    }
-}
-
-@media screen and (min-width: 376px) {
-    .container {
-        max-width: calc(375px - 40px);
+    .plans {
+        left: 80px;
     }
 }
 
 @media screen and (min-width: 576px) {
     body {
-        background: no-repeat top url("../images/pattern-background-desktop.svg"), linear-gradient(var(--pale-blue), var(--pale-blue));
-        background-size: 100% 50%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .container {
-        width: 100%;
-        max-width: 375px;
-        height: 560px;
-        background-color: #fff;
-        color: var(--desaturated-blue);
-        border-radius: 20px;
-        overflow: hidden;
-    }
-
-    .illustration-hero {
-        height: 195px;
+        background: var(--pale-blue) no-repeat top url("../images/pattern-background-desktop.svg");
         background-size: contain;
-    }
-
-    #information {
-        height: calc(560px - 195px);
     }
 }
