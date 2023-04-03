@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    /* FONT */
+    --font: 'League Spartan', sans-serif;
+    /* COLOR */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom 52vh, right top 12vh;
+    min-height: 100vh;
+    font: 400 15px var(--font);
+    background-color: white;
+    display: grid;
+    place-content: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: max-content repeat(3, 1fr);
+    grid-template-areas:
+        "prod star star star"
+        "art art art art";
+    row-gap: 2rem;
+    width: 100%;
+    max-width: 940px;
+    padding: 10px 30px;
+}
+
+.products {
+    width: 360px;
+    display: grid;
+    grid-area: prod;
+    place-content: center;
+    gap: 1rem;
+}
+
+#title {
+    font-size: 3rem;
+    letter-spacing: -2px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+}
+
+.description {
+    font-weight: 500;
+    color: var(--dark-grayish-magenta);
+    line-height: 20px;
+}
+
+.rated {
+    grid-area: star;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stars {
+    width: 370px;
+    display: flex;
+    background-color: var(--light-grayish-magenta);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.stars img {
+    width: 15px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.stars p {
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+    margin-left: 15px;
+}
+
+.stars:nth-child(1) {
+    margin-right: 80px;
+}
+
+.stars:nth-child(2) {
+    margin-right: 40px;
+}
+
+.comments {
+    display: flex;
+    align-items: flex-start;
+    grid-area: art;
+    gap: 1rem;
+}
+
+article {
+    background-color: var(--very-dark-magenta);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 2rem 1.5rem;
+    gap: 1.2rem;
+    line-height: 20px;
+}
+
+article img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.header-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user h2,
+.user p {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.user p {
+    color: var(--soft-pink);
+}
+
+#second {
+    margin-top: 25px;
+}
+
+#third {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        background: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: left -15vw top, right bottom;
+    }
+
+    #container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "prod"
+            "star"
+            "art";
+        max-width: 320px;
+        padding: 5rem 1.25rem;
+    }
+
+    .products {
+        width: 100%;
+        text-align: center;
+    }
+
+    #title {
+        font-size: 2rem;
+        line-height: 30px;
+        padding: 0 20px;
+    }
+
+    .rated {
+        align-items: center;
+    }
+
+    .stars {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .stars img {
+        margin-right: 0px;
+        margin-bottom: 3px;
+    }
+
+    .stars p {
+        margin-left: 0;
+    }
+
+    .stars:nth-child(1) {
+        margin-right: 0;
+    }
+
+    .stars:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .comments {
+        flex-direction: column;
+    }
+
+    #second {
+        margin-top: 0;
+    }
+
+    #third {
+        margin-top: 0;
+    }
+}
