@@ -1,27 +1,27 @@
 window.onload = init;
 
 function init() {
-    const inputItems = document.querySelectorAll("#rate>input");
-    for (let i = 0; i < inputItems.length; i++) {
-        inputItems[i].onclick = handleClick;
+    const radios = document.querySelectorAll("input[type='radio']");
+    for (let i = 0; i < radios.length; i++) {
+        radios[i].onclick = handlerClick;
     }
 
     const btnSubmit = document.querySelector("#btnSubmit");
-    btnSubmit.onclick = handleEnd;
+    btnSubmit.onclick = handlerSubmit;
 }
 
-function handleClick(eventObj) {
+function handlerClick(e) {
     const selected = document.querySelector("#selected");
-    const inputItem = eventObj.target;
-    let num = inputItem.value;
-    selected.innerHTML = num;
+    let radioCurrent = e.target;
+    let radioValue = radioCurrent.value;
+    selected.innerHTML = radioValue;
 }
 
-function handleEnd() {
+function handlerSubmit() {
+    const container = document.querySelector(".container");
     const start = document.querySelector("#start");
     const end = document.querySelector("#end");
-    if (end.classList.contains("close")) {
-        end.classList.remove("close");
-        start.classList.add("close");
-    }
+    end.classList.remove("close");
+    start.classList.add("close");
+    container.classList.add("anima");
 }
