@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* FONT */
+    font-size: 62.5%;
+    --font-default: 'Kumbh Sans', sans-serif;
+    /* COLOR */
+    /* Text */
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    /* Background gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    /* Neutral */
+    /* Text */
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    /* Dividers */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 400 1.2rem var(--font-default);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(180deg, var(--soft-violet), var(--soft-blue));
+    padding: 13rem 0.5rem 3rem 0.5rem;
+}
+
+.container {
+    width: 30.5rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: -0.2rem 1.5rem 3rem rgba(29, 30, 53, 0.2);
+}
+
+.image-wrapper {
+    position: relative;
+    background-image: url("../images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    padding-top: 13rem;
+}
+
+.image-wrapper-inner {
+    width: 25rem;
+    height: 19rem;
+    background-image: url("../images/illustration-woman-online-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -86%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box {
+    display: none;
+}
+
+.accordion-wrapper {
+    width: 25rem;
+    padding: 0 0rem 4rem 0rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--very-dark-desaturated-blue);
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.questions-answers-wrapper {
+    margin: 1.5rem 0;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--very-dark-grayish-blue);
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2:hover {
+    color: var(--soft-red);
+}
+
+.questions-answers-wrapper.active h2 {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+h2::after {
+    content: "";
+    display: inline-block;
+    background-image: url("../images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 0.7rem;
+    transition: all 0.2s ease-out;
+    margin-left: 1rem;
+}
+
+.questions-answers-wrapper.active h2::after {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-out;
+}
+
+.answers {
+    display: none;
+    margin-top: 1rem;
+    color: var(--dark-grayish-blue);
+    line-height: 2rem;
+    animation: answer 0.2s ease-out;
+}
+
+.dividers {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-grayish-blue);
+}
+
+.questions-answers-wrapper.active .answers {
+    display: block;
+}
+
+/* Animation Answers */
+@keyframes answer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 23.4rem) {
+    .container {
+        width: 36rem;
+    }
+}
+
+@media screen and (min-width: 26.5rem) {
+    .container {
+        width: 41rem;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        position: relative;
+        width: 65rem;
+        height: 40rem;
+        display: flex;
+    }
+
+    .image-wrapper {
+        width: 30rem;
+        background-image: url("../images/bg-pattern-desktop.svg");
+        background-position: 101% 68%;
+        background-size: 250%;
+        padding-top: 0;
+        overflow: hidden;
+    }
+
+    .image-wrapper-inner {
+        width: 36rem;
+        height: 27.3rem;
+        background-image: url("../images/illustration-woman-online-desktop.svg");
+        top: 50%;
+        left: -20.5%;
+        transform: translateY(-50%);
+    }
+
+    .box {
+        display: block;
+        width: 14.5rem;
+        height: auto;
+        position: absolute;
+        top: 41.5%;
+        left: -10.6%;
+        z-index: 1;
+    }
+
+    .accordion-wrapper {
+        padding: 0;
+        margin: auto;
+    }
+
+    h1 {
+        padding-bottom: 0.5rem;
+        text-align: left;
+    }
+}
