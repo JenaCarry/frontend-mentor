@@ -112,6 +112,14 @@ h2 {
     color: #6E8098;
 }
 
+.share-icon:hover {
+    background-color: var(--desaturated-dark-blue);
+}
+
+.share-icon:hover .fa-share {
+    color: #fff;
+}
+
 ul {
     list-style: none;
     display: flex;
