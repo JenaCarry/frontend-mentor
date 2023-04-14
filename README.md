@@ -25,3 +25,5 @@ Frontend Mentor Challenges
 * <a href="https://jenacarry.github.io/frontend-mentor/interactive-rating-component-main/" target="_blank">**interactive-rating-component-main**</a>
   
 * <a href="https://jenacarry.github.io/frontend-mentor/faq-accordion-card-main/" target="_blank">**faq-accordion-card-main**</a>
+
+* <a href="https://jenacarry.github.io/frontend-mentor/article-preview-component-master/" target="_blank">**article-preview-component-master**</a>
