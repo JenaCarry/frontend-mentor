@@ -29,6 +29,12 @@ body {
     place-content: center;
     background-color: var(--very-light-gray);
     margin: 3.75rem 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .container {
@@ -132,12 +138,6 @@ img {
 @media screen and (min-width: 48rem) {
     body {
         margin: 3rem 0;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    body::-webkit-scrollbar {
-        display: none;
     }
 
     .container {
