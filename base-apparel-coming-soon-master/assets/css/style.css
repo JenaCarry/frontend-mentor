@@ -188,6 +188,9 @@ form {
         justify-content: center;
         text-align: left;
         padding: 0 170px 0 100px;
+        background-image: url("../images/bg-pattern-desktop.svg"), linear-gradient(135deg, var(--linear-container1), var(--linear-container2));
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .title {
