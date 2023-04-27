@@ -2,44 +2,45 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="logo">
-      <img src="assets/images/logo.svg" alt="Logo">
+    <div class="container">
+        <div class="grid-left">
+            <div class="image-side">
+                <img class="logo" src="assets/images/logo.svg" alt="Icon Logo">
+                <img class="hero-mobile" src="assets/images/hero-mobile.jpg" alt="Hero Mobile">
+            </div>
+            <div class="text-side">
+                <h1 class="title">We're
+                    <span class="broken-title">coming</span>
+                    <span class="broken-title">soon</span>
+                </h1>
+                <p class="description">
+                    Hello fellow shoppers! We're currently building our new fashion store.
+                    Add your email below to stay up-to-date with announcements and our launch deals.
+                </p>
+                <form class="form" autocomplete="on">
+                    <input type="email" name="email" id="inputEmail" placeholder="Email Address" autocomplete="email">
+                    <img class="icon-error" src="assets/images/icon-error.svg" alt="Icon Error">
+                    <button class="btn">
+                        <img class="icon-arrow" src="assets/images/icon-arrow.svg" alt="Icon Arrow">
+                    </button>
+                    <p class="status"></p>
+                </form>
+            </div>
+        </div>
+        <div class="grid-right">
+            <img class="hero-desktop" src="assets/images/hero-desktop.jpg" alt="Hero Desktop">
+        </div>
     </div>
-    <picture>
-      <source media="(min-width: 800px)" srcset="assets/images/hero-desktop.jpg" type="image/jpg">
-      <img class="woman" src="assets/images/hero-mobile.jpg" alt="A woman">
-    </picture>
-    <main class="main">
-      <h1 class="title">
-        <span class="colorful-title">We're</span>
-        coming <br>soon
-      </h1>
-      <p>
-        Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.
-      </p>
-      <form>
-        <input type="email" name="email" id="inputEmail" class="inputEmail" placeholder="Email Address"
-          autocomplete="email">
-        <img class="icon-error" src="assets/images/icon-error.svg" alt="Icon Error">
-        <p class="msg-error">Please provide a valid email</p>
-        <button class="btn">
-          <img src="assets/images/icon-arrow.svg" alt="Icon Arrow">
-        </button>
-      </form>
-    </main>
-  </div>
-  <script src="assets/js/index.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

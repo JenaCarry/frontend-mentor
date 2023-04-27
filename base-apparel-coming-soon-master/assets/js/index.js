@@ -7,13 +7,18 @@ function init() {
   email.onkeypress = handleKeyPress;
 }
 
-function handlerClick(eventObj) {
+function handlerClick() {
   const email = document.querySelector("#inputEmail");
+  const status = document.querySelector(".status");
   const emailValue = email.value;
   if (emailValue === "" || !checkEmail(emailValue)) {
+    email.parentNode.classList.remove("valid");
     email.parentNode.classList.add("invalid");
+    status.innerHTML = "Please provide a valid email";
   } else if (checkEmail(emailValue)) {
     email.parentNode.classList.remove("invalid");
+    email.parentNode.classList.add("valid");
+    status.innerHTML = "Thanks to subscribing to our newsletter";
   }
 }
 
@@ -39,8 +44,16 @@ function handleKeyPress(e) {
 //   }
 // });
 
-const form = document.querySelector("form");
+const form = document.querySelector(".form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+});
+
+document.addEventListener("keydown", (event) => {
+  const email = document.querySelector("#inputEmail");
+  if (event.key === "Backspace") {
+    email.parentNode.classList.remove("invalid");
+    email.parentNode.classList.remove("valid");
+  }
 });
