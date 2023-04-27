@@ -31,3 +31,5 @@ Frontend Mentor Challenges
 * <a href="https://jenacarry.github.io/frontend-mentor/four-card-feature-section-master/" target="_blank">**four-card-feature-section-master**</a>
 
 * <a href="https://jenacarry.github.io/frontend-mentor/base-apparel-coming-soon-master/" target="_blank">**base-apparel-coming-soon-master**</a>
+
+* <a href="https://jenacarry.github.io/frontend-mentor/single-price-grid-component-master/" target="_blank">**social-proof-section-master**</a>
