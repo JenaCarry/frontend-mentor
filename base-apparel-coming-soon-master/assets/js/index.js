@@ -1,11 +1,9 @@
-window.onload = init;
-
-function init() {
+window.onload = () => {
   const btn = document.querySelector(".btn");
-  btn.onclick = handlerClick;
+  btn.addEventListener("click", handlerClick);
   const email = document.querySelector("#inputEmail");
-  email.onkeypress = handleKeyPress;
-}
+  email.addEventListener("keydown", handleKeyPress);
+};
 
 function handlerClick() {
   const email = document.querySelector("#inputEmail");
@@ -29,24 +27,14 @@ function checkEmail(email) {
 }
 
 function handleKeyPress(e) {
-  const btn = document.querySelector(".btn");
-  if (e.keyCode === 13) {
+  if (e.key === "Enter") {
+    const btn = document.querySelector(".btn");
     btn.click();
     return false;
   }
 }
 
-// document.addEventListener("keypress", (e) => {
-//   if (e.key === "Enter") {
-//     e.preventDefault();
-//     const btn = document.querySelector(".btn");
-//     btn.click();
-//   }
-// });
-
-const form = document.querySelector(".form");
-
-form.addEventListener("submit", (e) => {
+document.querySelector(".form").addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
